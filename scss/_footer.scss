@@ -1,0 +1,100 @@
+//
+//  FOOTER
+//
+
+.footer {
+    padding-bottom: 1em;
+}
+
+.sub-footer {
+    padding: {
+        top: 5.31em;
+        bottom: 0;
+        left: 1em;
+        right: 1em;
+    }
+    
+    & .footer-nav {
+        display: flex;
+        
+        & ul {
+            padding: 0;                
+            margin: {
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 3em;
+            }
+        }
+        
+        & a {
+            line-height: 1.63em;
+            opacity: .7;
+            transition: all .4s ease;
+            letter-spacing: .04em;
+            
+            &:hover,
+            &:focus {
+                opacity: 1;
+            }
+        }
+    }
+    
+    & .logo {
+        margin: {
+            bottom: 10.13em;
+            right: 8.44em;
+        }
+        
+        @include left;
+    }
+    
+    & .ver-line {
+        width: 1px;
+        height: 5.63em;
+        background: darken(map-get($parts, color), 60%);
+        margin: 0 4em;
+    }
+}
+    
+.end-footer {
+    display: flex;
+    flex-direction: column;
+    color: darken(map-get($parts, color), 60%);
+    
+    & .first {
+        margin-left: 20.9533333333em;
+        font-size: 0.75em;
+        line-height: 1.4em;
+        margin: {
+            top: 0;
+            bottom: 4.416666666666667em;
+        }
+            
+        & span {
+            display: block;
+            margin-bottom: .8em;
+        }
+    }
+    
+    & .second {
+        font-size: 2em;
+        text-align: center;
+        margin: 0;
+        padding: 1.84375em 0;
+        border-top: 1px solid darken(map-get($parts, color), 60%);
+            
+       & p {
+           margin: 0;
+       }
+        
+       & a {
+           color: darken(map-get($parts, color), 60%);
+           transition: all .4s ease;
+           &:hover,
+           &:focus {
+               color: map-get($parts, color);
+           }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+//
+//    VARIABLES
+
+// debug
+$debug: false;
+
+//body
+$body-width: 100%;
+$main-font: Helvetica Neue, Helvetica, Arial, sans-serif;
+$container-width: 1000px;
+
+//main-header
+$image-width: 59%;
+$content-width: 100% - $image-width;
+
+//colors
+$main: (
+    color: #333,
+    bg: #fff
+);
+
+$parts: (
+    color: #fff,
+    bg: #404040
+);
+
+$mainHeader: (
+    color: #fff,
+    bg: #3EA6FF
+);
+
+$main-headLink: (
+    color: #665200,
+    bg: #FFCA00,
+    border: #B38F00    
+);
+
+$footerDark-color: #666;

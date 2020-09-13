@@ -1,0 +1,47 @@
+/* general */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+/* element border */
+/** { outline: 3px solid black; } */
+
+@import 'variables';
+@import 'mixins';
+
+body {
+    max-width: $body-width;
+    background: map-get($main, bg);
+    padding: 0;
+    
+    color: map-get($main, color);
+    font: {
+        size: 100%;
+        family: $main-font;
+    }    
+}
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+@import 'debug';
+@import 'header';
+@import 'main';
+@import 'footer';
+@import 'media-parts';
+@import 'media-main';

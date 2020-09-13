@@ -1,0 +1,194 @@
+//
+//  MAIN
+//
+
+.main {
+    & .main-header,
+    & .container section {
+        margin-bottom: 9em;
+    }
+}
+
+.main-header {
+    @include clearfix;
+    background: map-get($mainHeader, bg);
+    color: map-get($mainHeader, color);
+
+    & .container {
+        padding: 0 1em;
+    }
+    
+    & .image {
+        width: $image-width;
+        margin-bottom: 6em;
+        @include right;
+    }
+
+    & .content {
+        width: $content-width;
+        margin-top: 4.333333em;
+        margin-bottom: 2em;
+        
+        font: {
+            size: 1.13em;
+        }
+
+        line-height: 1.88889em;
+
+        @include left;
+
+        & h1 {
+            font-size: 2.666667em;
+            line-height: 1.08333333em;
+
+            margin: {
+                top: 0;
+                bottom: 0.1041667em;
+            }
+        }
+
+        & a {
+            color: map-get($main-headLink, color);
+            background: map-get($main-headLink, bg);
+            padding: 1.4em 3.083333em 1.45em;
+            
+            font-size: 0.666667em;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            border: 1px solid map-get($main-headLink, border);
+            border-radius: .2em;
+            transition: all .4s ease;
+            
+            &:hover,
+            &:focus {
+                color: map-get($mainHeader, color);
+                background: darken(map-get($main-headLink, bg), 10%);
+            }            
+        }
+    }
+}
+
+.slider {
+    margin: {
+        left: 3.31em;
+        right: 3.31em;
+    }
+
+    & .item {
+        display: flex;
+
+        & .image {
+            text-align: center;
+
+            & img {
+                margin-bottom: 1em;
+            }
+        }
+
+        & .content {
+            width: 60%;
+            font-size: 1.2em;
+            margin-left: 2em;
+
+            & h2 {
+                font-size: 1.2em;
+                color: map-get($mainHeader, bg);
+                margin-top: 0;
+            }
+
+            & p {
+                line-height: 2.06em;
+            }
+
+            & span {
+                display: block;
+                opacity: .5;
+                margin-top: .8em;
+            }
+        }
+    }
+
+    & .navigation {
+        text-align: center;
+        margin-top: 2em;
+
+        & li {
+            display: inline-block;
+            background: map-get($main, color);
+            opacity: .2;
+            margin: 0 .8em;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            transition: all .4s ease;
+
+            &:hover,
+            &:focus {
+                opacity: 1;
+                cursor: pointer;
+            }
+
+            &.selected {
+                background: map-get($mainHeader, bg);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.video {
+    margin: 0 1em;
+    position: relative;
+    padding-bottom: 54.7%;
+    height: 0;
+    
+    & iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        
+        border: 3px solid map-get($main, bg);
+        border-radius: .2em;
+        box-shadow: 0 0 20px 10px darken(map-get($main, bg), 5%);
+    }
+}
+
+.numbers {
+    text-align: center;
+    color: lighten(map-get($main, color), 40%);
+    
+    & strong {
+        color: map-get($mainHeader, bg);
+        display: block;
+        margin-bottom: .4em;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    
+    & h1 {
+        font-size: 4em;
+        line-height: .95em;
+        
+        & strong {
+            margin-bottom: 0;
+        }
+        
+        & span {
+            font-size: .5em;
+            font-weight: normal;
+        }
+    }
+    
+    & p {
+        font-size: 1.13em;
+        display: inline-block;        
+    }
+    
+    & p:last-child {
+        margin-left: 13.88888888888889em;
+    }
+}
